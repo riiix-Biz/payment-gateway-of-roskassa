@@ -1,0 +1,13 @@
+<form action="{{ action }}" method="get">
+    <input type="hidden" name="shop_id" value="{{ sid }}"/>
+    <input type="hidden" name="amount" value="{{ amount }}"/>
+    <input type="hidden" name="order_id" value="{{ cart_order_id }}"/>
+    <input type="hidden" name="currency" value="{{ currency_code }}"/>
+    <input type="hidden" name="sign" value="{{ MNT_SIGNATURE }}"/>
+    <input type="hidden" name="test" value="{{ roskassa_test }}"/>
+    <div class="buttons">
+        <div class="{% if ap_use %} text-center {% else %} pull-right {% endif %}">
+            <input type="submit" value="{{ btn_confirm }}" class="btn btn-primary"/>
+        </div>
+    </div>
+</form>
